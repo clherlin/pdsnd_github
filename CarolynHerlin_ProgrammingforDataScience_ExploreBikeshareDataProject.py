@@ -33,7 +33,7 @@ def get_filters():
             break
         else:
             print()
-            print("That was not a valid choice. Please try again. ")
+            print("That was not a city that is in the dataset. Please try again. ")
             city_test=False
 
     # get user input for month (all, january, february, ... , june)
@@ -194,7 +194,7 @@ def station_stats(df):
  
 
 def trip_duration_stats(df):
-    """Displays statistics on the total and average trip duration."""
+    """Displays statistics on the total and average trip duration as well as the longest and shortest trip."""
 
     print('\nCalculating Trip Duration...\n')
     start_time = time.time()
@@ -286,6 +286,9 @@ def user_stats(df, city):
         common_year = int(common_year_short_str)
         common_age = 2017 - common_year
         print('Most of the riders in the data set you selected were {} years old at the time of the ride.'.format(common_age))
+ 
+    else:
+        print('Rider age information is not available for Washington.')
 
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
