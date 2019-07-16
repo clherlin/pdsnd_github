@@ -284,6 +284,9 @@ def user_stats(df, city):
         common_year = int(common_year_short_str)
         common_age = 2017 - common_year
         print('Most of the riders in the data set you selected were {} years old at the time of the ride.'.format(common_age))
+ 
+    else:
+        print('Rider age information is not available for Washington.')
 
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
