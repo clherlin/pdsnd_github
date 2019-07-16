@@ -31,7 +31,7 @@ def get_filters():
             break
         else:
             print()
-            print("That was not a valid choice. Please try again. ")
+            print("That was not a city that is in the dataset. Please try again. ")
             city_test=False
 
     # get user input for month (all, january, february, ... , june)
